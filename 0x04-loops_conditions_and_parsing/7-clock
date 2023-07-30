@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# a task that prints hours and minutes
+
+i=0
+j=0
+
+for (( i=0; i<12; i++ ))
+do
+	echo "Hour: $i"
+	for (( j=1; j<60; j++ ))
+	do
+		echo "$j"
+	done
+done
