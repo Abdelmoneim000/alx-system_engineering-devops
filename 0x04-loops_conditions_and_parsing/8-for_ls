@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A script that prints the contests of the folder in a list format
+
+for i in `ls`; do 
+	echo "$i"
+done
