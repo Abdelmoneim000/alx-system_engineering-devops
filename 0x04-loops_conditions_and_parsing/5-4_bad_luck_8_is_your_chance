@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# a script to test your luck for today!!
+
+i=0
+while [ $i -lt 10 ]
+do
+	if [ $i == 4 ]; then
+		echo "bad luck"
+	elif [ $i == 8 ]; then
+		echo "good luck"
+	else
+		echo "Best school"
+	fi
+	((i++))
+done
+
