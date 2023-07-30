@@ -2,5 +2,5 @@
 # A script that prints the contests of the folder in a list format
 
 for i in `ls`; do 
-	echo "$i"
+	echo "$i" | cut -d '-' -f 2
 done
