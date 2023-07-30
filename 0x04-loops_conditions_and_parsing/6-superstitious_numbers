@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# a script to test your luck for today!!
+
+i=0
+while [ $i -lt 20 ]
+do
+	((i++))
+        if [ $i == 4 ]; then
+                echo "4"
+		echo "bad luck from China"
+        elif [ $i == 9 ]; then
+                echo "9"
+		echo "bad luck from Japan"
+        else
+                echo "$i"
+        fi
+done
