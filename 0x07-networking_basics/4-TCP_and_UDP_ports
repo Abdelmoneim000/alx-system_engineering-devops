@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# ش لاشسا � A bash script that displays all listing ports with sockets
+# A bash script that displays all listing ports with sockets
 
 sudo netstat -lp
