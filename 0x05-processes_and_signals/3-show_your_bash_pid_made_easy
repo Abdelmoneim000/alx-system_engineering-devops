@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A shell  script that shows all processes available
 # Only with bash word
-for i in `ps -aux | pgrep bash`
+for i in $(ps -aux | pgrep bash)
 do
 echo "$i bash"
 done
