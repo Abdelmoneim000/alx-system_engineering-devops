@@ -5,5 +5,5 @@ file { 'creating a new file':
   owner  => 'www-data',              # Owner of the file
   group  => 'www-data',              # Group of the file
   mode   => '0744',              # Permissions (octal)
-  content => 'Welcome to my server!\n', # Content of the file
+  content => 'I love Puppet\n', # Content of the file
 }
