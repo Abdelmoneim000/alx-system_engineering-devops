@@ -1,5 +1,6 @@
 # Using exec Source
 exec { 'Kill a process':
-  command => '/usr/bin/pkill killmenow',  # command to kill the process
-  unless  => '/usr/bin/ps -aux | grep "killmenow" | grep -v grep && false' # check if the process active or not
+  command => 'pkill killmenow',  # command to kill the process
+  path    => ['/usr/bin', '/usr/sbin', '/bin'], # providing a path set to look for the command
+  unless  => 'ps -aux | grep "killmenow" | grep -v grep && false' # check if the process active or not
 }
