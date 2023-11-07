@@ -11,7 +11,10 @@ def number_of_subscribers(subreddit):
         return 0
 
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    r = requests.get(url)
+    headers = {
+        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
+    }
+    r = requests.get(url, headers=headers)
 
     try:
         data = r.json()
