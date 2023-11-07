@@ -1,14 +1,26 @@
 #!/usr/bin/python3
-"""Function to query subscribers on a given Reddit subreddit."""
+"""script to get subscribers"""
 import requests
-
+import sys
+import json
 
 def number_of_subscribers(subreddit):
-    """Return the total number of subscribers on a given subreddit."""
-    url = "https://www.reddit.com/r/{}/about/.json".format(subreddit)
+    """get subscribers of a given subreddit"""
 
-    response = requests.get(url, allow_redirects=False)
-    if response.status_code == 404:
+    if subreddit is None:
         return 0
-    results = response.json().get("data")
-    return results.get("subscribers")
+
+    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    r = requests.get(url)
+
+    try:
+        data = r.json()
+        if r.status_code == 200:
+            subscribers = data["data"]["subscribers"]
+            return subscribers
+        else:
+            return 0
+    except json.JSONDecodeError:
+        print(f"Failed to decode JSON response for subreddit: {subreddit}")
+        return 0
+
