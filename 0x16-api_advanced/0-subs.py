@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """script to get subscribers"""
 import requests
-import sys
 import json
+
 
 def number_of_subscribers(subreddit):
     """get subscribers of a given subreddit"""
@@ -22,4 +22,3 @@ def number_of_subscribers(subreddit):
             return 0
     except json.JSONDecodeError:
         return 0
-
