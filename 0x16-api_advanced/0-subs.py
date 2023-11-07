@@ -21,6 +21,5 @@ def number_of_subscribers(subreddit):
         else:
             return 0
     except json.JSONDecodeError:
-        print(f"Failed to decode JSON response for subreddit: {subreddit}")
         return 0
 
